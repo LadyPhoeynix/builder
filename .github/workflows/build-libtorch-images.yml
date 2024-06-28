@@ -30,7 +30,7 @@ env:
 
 jobs:
   build-docker-cuda:
-    runs-on: linux.12xlarge.ephemeral
+    runs-on: linux.12xlarge
     strategy:
       matrix:
         cuda_version: ["12.4", "12.1", "11.8"]
@@ -52,7 +52,7 @@ jobs:
     runs-on: linux.12xlarge
     strategy:
       matrix:
-        rocm_version: ["5.7", "6.0"]
+        rocm_version: ["6.0", "6.1"]
     env:
       GPU_ARCH_TYPE: rocm
       GPU_ARCH_VERSION: ${{ matrix.rocm_version }}

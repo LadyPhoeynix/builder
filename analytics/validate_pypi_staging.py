@@ -13,16 +13,22 @@ PLATFORMS = [
     "manylinux1_x86_64",
     "manylinux2014_aarch64",
     "win_amd64",
-    "macosx_10_9_x86_64",
     "macosx_11_0_arm64",
 ]
-PYTHON_VERSIONS = ["cp38", "cp39", "cp310", "cp311", "cp312"]
+PYTHON_VERSIONS = [
+    "cp38", 
+    "cp39", 
+    "cp310", 
+    "cp311", 
+    "cp312"
+    ]
 S3_PYPI_STAGING = "pytorch-backup"
 PACKAGE_RELEASES = {
-    "torch": "2.2.0",
-    "torchvision": "0.17.0",
-    "torchaudio": "2.2.0",
-    "torchtext": "0.17.0",
+    "torch": "2.3.1",
+    "torchvision": "0.18.1",
+    "torchaudio": "2.3.1",
+    "torchtext": "0.18.0",
+    "executorch": "0.2.1"
 }
 
 PATTERN_V = "Version:"

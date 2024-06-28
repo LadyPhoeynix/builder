@@ -47,6 +47,12 @@ on:
         default: false
         required: false
         type: boolean
+      use_split_build:
+        description: |
+          [Experimental] Use Split Build
+        required: false
+        type: boolean
+        default: false
   workflow_dispatch:
     inputs:
       os:
@@ -105,6 +111,12 @@ on:
         default: false
         required: false
         type: boolean
+      use_split_build:
+        description: |
+          [Experimental] Use Split Build
+        required: false
+        type: boolean
+        default: false
 
 
 jobs:
@@ -141,6 +153,7 @@ jobs:
       include-test-ops: ${{ inputs.include-test-ops }}
       use-only-dl-pytorch-org: ${{ inputs.use-only-dl-pytorch-org }}
       use-force-reinstall: ${{ inputs.use-force-reinstall }}
+      use_split_build: ${{ inputs.use_split_build }}
 
   linux-aarch64:
     if:  inputs.os == 'linux-aarch64' || inputs.os == 'all'
